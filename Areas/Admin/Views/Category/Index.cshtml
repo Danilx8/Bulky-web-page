@@ -26,7 +26,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach(var obj in Model) {
+            @foreach(var obj in Model.OrderBy(category => category.DisplayOrder)) {
                 <tr class="table-active">
                     <td>@obj.Name</td>
                     <td>
